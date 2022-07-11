@@ -3,9 +3,9 @@ import { faClipboardCheck, faListCheck } from '@fortawesome/free-solid-svg-icons
 import { db } from 'src/app/db/db';
 
 @Component({
-  selector: 'add-task',
-  templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  selector: 'add-list',
+  templateUrl: './add-list.component.html',
+  styleUrls: ['./add-list.component.scss']
 })
 export class AddComponent {
   faClipboardCheck = faClipboardCheck;

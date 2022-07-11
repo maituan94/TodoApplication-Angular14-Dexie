@@ -1,7 +1,9 @@
 <div class="">
-    <add-task></add-task>
-    <div *ngFor="let list of todoLists | async;">
-        <list-task [todoList]="list"></list-task>
+    <add-list></add-list>
+    <div class="row">
+        <div class="col-xl-6 mb-3" *ngFor="let list of todoLists | async;">
+            <list-task [todoList]="list"></list-task>
+        </div>
     </div>
     <empty-task *ngIf="!(todoLists | async)?.length"></empty-task>
 </div>

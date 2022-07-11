@@ -6,8 +6,8 @@ import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'list-task',
-  templateUrl: './listtask.component.html',
-  styleUrls: ['./listtask.component.scss']
+  templateUrl: './list-task.component.html',
+  styleUrls: ['./list-task.component.scss']
 })
 export class ListTaskComponent implements OnInit {
   @Input() todoList!: TodoList;

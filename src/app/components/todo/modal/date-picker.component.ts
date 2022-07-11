@@ -3,7 +3,7 @@ import { db } from 'src/app/db/db';
 
 @Component({
   selector: 'date-picker-modal',
-  templateUrl: './datePicker.component.html',
+  templateUrl: './date-picker.component.html',
 })
 export class DatePickerModalComponent implements OnInit {
   @Input() id?: number;

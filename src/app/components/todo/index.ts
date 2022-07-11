@@ -1,9 +1,9 @@
-import { AddComponent } from './addTask/add.component'
-import { EmptyTaskComponent } from './emptyTask/empytask.component'
+import { AddComponent } from './add-list/add-list.component'
+import { EmptyTaskComponent } from './emptyTask/empy-task.component'
 import { TaskComponent } from './task/task.component'
-import { ListTaskComponent } from './listTask/listtask.component'
-import { DeleteModalComponent } from './modal/Delete.component'
-import { DatePickerModalComponent } from './modal/datePicker.component'
+import { ListTaskComponent } from './listTask/list-task.component'
+import { DeleteModalComponent } from './modal/delete.component'
+import { DatePickerModalComponent } from './modal/date-picker.component'
 
 export {
     AddComponent,

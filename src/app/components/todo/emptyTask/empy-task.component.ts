@@ -3,8 +3,8 @@ import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'empty-task',
-  templateUrl: './emptytask.component.html',
-  styleUrls:['./emptytask.component.scss']
+  templateUrl: './empty-task.component.html',
+  styleUrls:['./empty-task.component.scss']
 })
 export class EmptyTaskComponent {
   faThumbsUp = faThumbsUp;
