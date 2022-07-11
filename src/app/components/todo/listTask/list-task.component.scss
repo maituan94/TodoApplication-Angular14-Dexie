@@ -10,5 +10,7 @@
 }
 
 .task-list {
-    border-bottom: solid 1px #cccccc;
+    border: solid 1px #cccccc;
+    box-shadow: 1px 1px 5px 1px #cccccc;
+    border-radius: 10px;     
 }
