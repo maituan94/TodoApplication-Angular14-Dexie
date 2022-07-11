@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './route/app-routing.module';
-import { TodoModule } from './module/todoModule/todo-module.module';
-import { LayoutModule } from './module/layoutModule/layout-module.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { FooterComponent } from 'src/app/layout/footer/footer.component';
+import { HeaderComponent } from 'src/app/layout/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 
@@ -13,12 +15,14 @@ import { AboutComponent } from './pages/about/about.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule,
-    TodoModule
+    FontAwesomeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

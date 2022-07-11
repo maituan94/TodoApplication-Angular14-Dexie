@@ -12,13 +12,6 @@ export class AppDB extends Dexie {
       todoItems: '++id, todoListId',
     });
   }
-
-  async resetDatabase() {
-    await db.transaction('rw', 'todoItems', 'todoLists', () => {
-      this.todoItems.clear();
-      this.todoLists.clear();
-    });
-  }
 }
 
 export const db = new AppDB();

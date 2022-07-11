@@ -1,54 +1,33 @@
 <div class="input-group mb-3">
-    <div class="input-group-text">
-      <input
-        [(ngModel)]="task.done"
-        (click)="updateTask()"
-        class="form-check-input mt-0"
-        type="checkbox"
-        aria-label="Checkbox for following text input"
-      />
-    </div>
-    <input
-      type="text"
-      [class]="task.done ? 'form-control task-done' : 'form-control'"
-      aria-label="Text input with checkbox"
-      [disabled]="!isEditTask"
-      [(ngModel)]="task.title"
-      (keyup.enter)="updateTask()"
-    />
-    <span *ngIf="task.dueDate" [class]="task.done ? 'input-group-text task-done' : 'input-group-text'">{{dueDate}}</span>
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary dropdown-toggle"
-        type="button"
-        id="actionDropdown"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-      >
-        ...
-      </button>
-      <ul class="dropdown-menu" aria-labelledby="actionDropdown">
-        <li (click)="enableEdit()">
-          <div class="dropdown-item pt-2 pb-2">
-            <fa-icon [icon]="faPencil"></fa-icon><span class="ms-3">Edit</span>
-          </div>
-        </li>
-        <li>
-            <div
-            class="dropdown-item pt-2 pb-2"
-            data-bs-toggle="modal"
-            [attr.data-bs-target]="'#modalDelete'+this.task.id">
-            <fa-icon [icon]="faTrash"></fa-icon><span class="ms-3">Delete</span>
-          </div>
-        </li>
-        <li>
-            <div class="dropdown-item pt-2 pb-2" data-bs-toggle="modal"
-            [attr.data-bs-target]="'#modalDatePicker'+this.task.id">
-            <fa-icon [icon]="faCalendarCheck"></fa-icon><span class="ms-3">Due Date</span>
-          </div>
-        </li>
-      </ul>
-    </div>
+  <div class="input-group-text">
+    <input class="form-check-input mt-0" type="checkbox" aria-label="Checkbox for following text input" />
   </div>
-  <delete-modal [id]="task.id"></delete-modal>
-  <date-picker-modal [id]="task.id"></date-picker-modal>
+  <input type="text" class="form-control" aria-label="Text input with checkbox" />
+  <span class="input-group-text task-done">due Date</span>
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="actionDropdown" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      ...
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="actionDropdown">
+      <li>
+        <div class="dropdown-item pt-2 pb-2">
+          <fa-icon [icon]="faPencil"></fa-icon><span class="ms-3">Edit</span>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-item pt-2 pb-2" data-bs-toggle="modal" [attr.data-bs-target]="'#modalDelete'+this.task.id">
+          <fa-icon [icon]="faTrash"></fa-icon><span class="ms-3">Delete</span>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown-item pt-2 pb-2" data-bs-toggle="modal"
+          [attr.data-bs-target]="'#modalDatePicker'+this.task.id">
+          <fa-icon [icon]="faCalendarCheck"></fa-icon><span class="ms-3">Due Date</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<delete-modal [id]="task.id"></delete-modal>
+<date-picker-modal [id]="task.id"></date-picker-modal>

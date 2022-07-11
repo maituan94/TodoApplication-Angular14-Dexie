@@ -9,9 +9,9 @@
   <!-- Add a Task List collapse -->
   <div class="collapse" id="addList">
     <div class="input-group mb-3 mt-3">
-      <input (keyup.enter)="addNewList()" [(ngModel)]="listName" type="text" class="form-control" placeholder="Add a new task list."
+      <input type="text" class="form-control" placeholder="Add a new task list."
         aria-describedby="button-addon2" />
-      <button (click)="addNewList()" class="btn btn-secondary" type="button" id="button-addon2">
+      <button class="btn btn-secondary" type="button" id="button-addon2">
         Add
       </button>
     </div>
