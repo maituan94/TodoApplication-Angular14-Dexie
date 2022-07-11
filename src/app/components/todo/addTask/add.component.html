@@ -1,0 +1,19 @@
+<div class="add-task-n-list-block">
+
+  <!-- Add a new task list-->
+  <div class="btn btn-secondary" data-bs-toggle="collapse" data-bs-target="#addList" aria-expanded="false"
+    aria-controls="addCollapse">
+    <fa-icon [icon]="faListCheck"></fa-icon><span class="ms-3">Add a task list</span>
+  </div>
+
+  <!-- Add a Task List collapse -->
+  <div class="collapse" id="addList">
+    <div class="input-group mb-3 mt-3">
+      <input (keyup.enter)="addNewList()" [(ngModel)]="listName" type="text" class="form-control" placeholder="Add a new task list."
+        aria-describedby="button-addon2" />
+      <button (click)="addNewList()" class="btn btn-secondary" type="button" id="button-addon2">
+        Add
+      </button>
+    </div>
+  </div>
+</div>

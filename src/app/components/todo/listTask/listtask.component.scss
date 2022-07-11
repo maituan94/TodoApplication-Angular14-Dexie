@@ -1,0 +1,14 @@
+@import "../../../../assets/variable";
+
+.add-task {
+    text-align: right;
+}
+.list-title {
+    color: $card-header;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.task-list {
+    border-bottom: solid 1px #cccccc;
+}

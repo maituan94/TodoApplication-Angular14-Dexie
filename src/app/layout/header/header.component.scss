@@ -1,0 +1,28 @@
+@import "../../../assets/variable";
+
+.navbar-dark .navbar-brand {
+    color: black;
+    font-weight: bold;
+}
+
+.bg-primary {
+    background-color: $primary-color !important;
+}
+
+.btn-primary {
+    font-weight: bold;
+    color: black;
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:hover,
+    &:hover {
+        color: black;
+        background-color: $primary-color;
+        border-color: $primary-color;
+        opacity: 0.6;
+        transition: ease-in-out 0.2s;
+        outline: none;
+        box-shadow: none;
+    }
+}

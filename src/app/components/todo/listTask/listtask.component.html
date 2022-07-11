@@ -1,0 +1,58 @@
+<div class="task-list mb-3 pb-3">
+    <div style="border: none;" class="card mt-3">
+        <div class="card-header p-0 mb-3">
+            <div class="input-group">
+                <input (keyup.enter)="updateList()" type="text" [disabled]="!isEditList" class="form-control list-title"
+                    [(ngModel)]="todoList.title" />
+                <button (click)="enableEdit()" class="btn btn-secondary" type="button">
+                    {{isEditList ? "Update" : "Edit"}}
+                </button>
+                <button class="btn btn-secondary btn-delete-list" data-bs-toggle="modal"
+                    [attr.data-bs-target]="'#deleteModal'+todoList.id" type="button">
+                    Delete
+                </button>
+            </div>
+        </div>
+        <div class="add-task mb-3">
+            <!-- Add a new task -->
+            <div class="btn btn-secondary" data-bs-toggle="collapse" [attr.data-bs-target]="'#addTask'+todoList.id"
+                role="button" aria-expanded="false" aria-controls="addCollapse">
+                <fa-icon [icon]="faClipboardCheck"></fa-icon><span class="ms-3">Add a task</span>
+            </div>
+            <!-- Add a Task collapse -->
+            <div class="collapse" [attr.id]="'addTask'+todoList.id">
+                <div class="input-group mb-3 mt-3">
+                    <input (keyup.enter)="addTask()" [(ngModel)]="taskName" type="text" class="form-control"
+                        placeholder="Add more task!" aria-label="No more tasks, please!"
+                        aria-describedby="button-addon2" />
+                    <button (click)="addTask()" class="btn btn-secondary" type="button" id="button-addon2">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <single-task *ngFor="let item of todoItems | async" [task]="item">
+        </single-task>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" [id]="'deleteModal'+todoList.id" tabindex="-1" [attr.aria-labelledby]="'deleteModalLabel'+todoList.id" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" [attr.id]="'deleteModalLabel'+todoList.id">Delete Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Are you sure to delete this task?</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    No
+                </button>
+                <button (click)="deleteList()" type="button" class="btn btn-primary"
+                    data-bs-dismiss="modal">
+                    Yes, Delete It
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

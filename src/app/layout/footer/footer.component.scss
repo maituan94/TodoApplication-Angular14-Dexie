@@ -1,0 +1,32 @@
+@import "../../../assets/variable";
+
+.footer {
+    background-color: $primary-color;
+    color: black;
+    padding: 1rem;
+    height: 56px;
+
+    span {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto;
+    }
+
+    li {
+        padding: 0 0.5rem;
+    }
+
+    a {
+        color: black;
+    }
+}
